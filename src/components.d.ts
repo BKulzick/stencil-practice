@@ -101,7 +101,8 @@ declare global {
   }
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
-      
+      first?: string;
+      last?: string;
     }
   }
 }

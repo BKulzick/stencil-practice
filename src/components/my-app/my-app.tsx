@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
 
 
 @Component({
@@ -7,23 +7,20 @@ import { Component } from '@stencil/core';
 })
 export class MyApp {
 
+
+  @Prop() first: string;
+  @Prop() last: string;
+
   render() {
     return (
-      <div>
-        <header>
-          <h1>Stencil App Starter</h1>
-        </header>
+      <div class="boxed">
+        <h1>{this.first} {this.last}</h1>
+        {/* <h1>Bryan Kulzick</h1> */}
+        <p><b>Class :</b> Mage </p>
+        <p><b>Health:</b> 10 </p>
 
-        <main>
-          <stencil-router>
-            <stencil-route url='/' component='app-home' exact={true}>
-            </stencil-route>
-
-            <stencil-route url='/profile/:name' component='app-profile'>
-            </stencil-route>
-          </stencil-router>
-        </main>
       </div>
     );
   }
 }
+

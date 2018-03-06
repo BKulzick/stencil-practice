@@ -10,7 +10,7 @@ describe('my-app', () => {
     beforeEach(async () => {
       await render({
         components: [MyApp],
-        html: '<my-app></my-app>'
+        html: '<my-app first="Bryan" last="Kulzick"></my-app>'
       });
     });
   });
